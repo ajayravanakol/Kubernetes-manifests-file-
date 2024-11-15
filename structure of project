@@ -1,0 +1,10 @@
+healthcare-project/
+├── Dockerfile
+├── k8s-manifests/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   ├── ingress.yaml
+├── gitops/
+│   └── kustomization.yaml
+└── ci-cd/
+    └── pipeline.yaml
