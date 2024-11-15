@@ -1,0 +1,16 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  script:
+    - docker build -t your-docker-repo/healthcare-app:latest .
+
+test:
+  script:
+    - docker run --rm your-docker-repo/healthcare-app:latest pytest tests/
+
+deploy:
+  script:
+    - kubectl apply -k ./gitops/
